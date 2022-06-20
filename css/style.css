@@ -1,0 +1,153 @@
+/* Universal */
+
+html {  
+    box-sizing: border-box;
+    font-size: 62.5%; 
+    font-family: 'Work Sans', sans-serif;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-size: 1.6rem; 
+}
+img {   
+    max-width: 100%;
+    display: block;
+} 
+
+/* Home Page - Header */
+
+header {
+    background-color: #14a1c8;
+}
+.headerTitle h1 {
+    text-align: center;
+    font-size: 4rem;
+    margin: 0;
+    padding: 3rem 0.5rem;
+}
+@media( max-width: 520px ) {
+    .headerTitle h1 {
+        font-size: 2.5rem;
+    }
+}
+@media( max-width: 370px ) {
+    .headerTitle h1 {
+        font-size: 2rem;
+    }
+}
+span {
+    color: #fff;
+    font-weight: 900;
+}
+
+/* Home Page - Container */
+
+.containerFlex {
+    display: flex;
+    width: 80%;
+    margin: 4rem auto 2rem auto;
+    gap: 3rem;
+}
+@media( max-width: 980px ) {
+    .containerFlex {
+        width: 90%;
+        flex-direction: column;
+    }
+}
+
+/* Home Page - sectionSearch */
+
+.sectionSearch {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media( max-width: 980px ) {
+    .sectionSearch {
+        width: 60%;
+    }
+}
+@media( max-width: 590px ) {
+    .sectionSearch {
+        width: 90%;
+    }
+}
+.sectionSearch h3{
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+.formSearch select{
+   width: 100%;
+   margin: 0.4rem 0 1.5rem 0;
+   border-radius: 0.4rem;
+   font-size: 1.4rem;
+   padding: 0.4rem;
+   outline: none;
+   background-color: #fff;
+}
+
+/* Home Page - sectionResult */
+
+.sectionResult {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 5rem;
+}
+@media( max-width: 980px ) {
+    .sectionResult {
+        width: 100%;
+    }
+}
+.card {
+    width: 18rem;
+    height: 20rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    border: 0.5px solid #808080;
+    transition-property: transform;
+    transition-duration: .8s;
+}
+@media( max-width: 500px ) {
+    .card {
+        width: 25rem;
+        height: 26rem;
+    }
+}
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px 3px #808080;
+}
+.card img {
+    height: 65%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+.card p{
+    margin: 0;
+    font-size: 1.4rem;
+    text-align: center;
+}
+.brandModel {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+
+/* Class JS */
+
+.alert {
+    text-align: center;
+    color: red;
+    font-size: 2rem;
+}

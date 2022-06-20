@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;600;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>searchFilter</title>
+</head>
+<body>
+    <header class="headerTitle">
+        <h1>Tienda online <span>TecniPhone</span></h1>
+    </header>
+    <div class="containerFlex">
+        <section class="sectionSearch">
+            <h3>Filtra aquí tus busquedas</h3>
+            <form class="formSearch">
+                <label for="brand">Marca</label>
+                    <select id="brand">
+                        <option value="">seleccione</option>
+                        <option value="Samsung">Samsung</option>
+                        <option value="Huawei">Huawei</option>
+                        <option value="Xiaomi">Xiaomi</option>
+                        <option value="Apple">Apple</option>
+                    </select>
+                <label for="color">Color</label>
+                    <select id="color">
+                        <option value="">seleccione</option>
+                        <option value="Negro">Negro</option>
+                        <option value="Blanco">Blanco</option>
+                        <option value="Gris">Gris</option>
+                        <option value="Azul">Azul</option>
+                    </select>
+                <label for="priceMin">Precio mínimo</label>
+                    <select id="priceMin">
+                        <option value="">seleccione</option>
+                        <option value="800000">$ 800000</option>
+                        <option value="1000000">$ 1000000</option>
+                        <option value="1200000">$ 1200000</option>
+                        <option value="1400000">$ 1400000</option>
+                        <option value="1600000">$ 1600000</option>
+                        <option value="1800000">$ 1800000</option>
+                    </select>
+                <label for="priceMax">Precio máximo</label>
+                    <select id="priceMax">
+                        <option value="">seleccione</option>
+                        <option value="800000">$ 800000</option>
+                        <option value="1000000">$ 1000000</option>
+                        <option value="1200000">$ 1200000</option>
+                        <option value="1400000">$ 1400000</option>
+                        <option value="1600000">$ 1600000</option>
+                        <option value="1800000">$ 1800000</option>
+                    </select>
+            </form>
+        </section>
+        <section class="sectionResult" id="divResult"></section>
+    </div>
+    <div id="divAlert"></div>
+    <script src="js/db.js" type="module" defer></script>
+    <script src="js/app.js" type="module" defer></script>
+</body>
+</html>
