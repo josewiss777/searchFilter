@@ -39,24 +39,24 @@ priceMax.addEventListener('change', e => {
 //Register functions
 function showPhones(phones) {
     cleanResult();
-    phones.forEach( (phone, id) => {
-        const{ brand, model, color, price } = phone;
+    phones.forEach( (phone) => {  
+        const{ brand, model, color, price, id } = phone;
         const divCard = document.createElement('div')
         divCard.classList.add('card')
         const imgCard = document.createElement('img')
         imgCard.src = `./img/phone${id}.webp`
-        imgCard.alt= 'Telefono calular'
+        imgCard.alt= 'Telefono celular'
         const divBrandModel = document.createElement('div')
         divBrandModel.classList.add('brandModel')
         const pBrand = document.createElement('p')
         const pModel = document.createElement('p')
-        pBrand.textContent = `${brand}`
+        pBrand.textContent = `${brand} -`
         pModel.textContent = `${model}`
         divBrandModel.append(pBrand, pModel)
         const pColor = document.createElement('p')
         const pPrice = document.createElement('p')
         pColor.textContent = `${color}`
-        pPrice.textContent = `$ ${price}` 
+        pPrice.textContent = `$ ${price.toLocaleString('en-US')}` 
     
         divResult.appendChild(divCard)
         divCard.insertBefore(imgCard, divCard.children[0])
@@ -68,6 +68,7 @@ function showPhones(phones) {
 
 function filterPhone() { 
     const result = phones.filter(filterBrand).filter( filterColor ).filter( filterPriceMin ).filter( filterPriceMax ); //Aplica filter sobre la db(phones) y llama la funcion filterBrand
+    console.log(result)
     if( result.length > 0 ) {
         cleanError()
         showPhones(result)
